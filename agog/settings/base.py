@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'accounts.apps.AccountsConfig',
     'connections.apps.ConnectionsConfig',
+    'feeds.apps.FeedsConfig',
 ]
 
 MIDDLEWARE = [
