@@ -2,6 +2,8 @@ from rest_framework import serializers
 
 from accounts.models import User, Verification
 
+from api.profiles.serializers import ProfileSerializer
+
 
 class VerificationSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,9 +13,9 @@ class VerificationSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    verification = VerificationSerializer(read_only=True)
+    profile = ProfileSerializer(read_only=True)
     class Meta:
         model = User
-        fields = ('username', 'email', 'verification')
+        fields = ('username', 'email', 'profile')
 
 

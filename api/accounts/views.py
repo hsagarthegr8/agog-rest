@@ -17,3 +17,7 @@ class VerificationList(generics.ListAPIView):
     serializer_class = VerificationSerializer
 
 
+class UserDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    lookup_field = 'username'
+    serializer_class = UserSerializer
